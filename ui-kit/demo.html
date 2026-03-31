@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCC AI Credit Platform — UI Kit Demo</title>
+    <!-- Fonts: Inter (EN) and Tajawal (AR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="flex justify-between items-center" style="margin-bottom: var(--space-8)">
+        <div>
+            <h1>GCC AI Credit Platform UX/UI Kit</h1>
+            <p>Production-ready frontend components implementing the UX enhancement package.</p>
+        </div>
+        <div class="flex gap-4">
+            <button id="toggleDirBtn" class="btn btn-secondary">Toggle RTL/LTR (عربي/EN)</button>
+            <button id="toggleThemeBtn" class="btn btn-secondary">Toggle Dark/Light Mode</button>
+        </div>
+    </div>
+
+    <!-- 1. BUTTONS -->
+    <h2 class="section-title">1. Buttons & Controls</h2>
+    <div class="flex gap-4 mb-4 items-center flex-wrap">
+        <button class="btn btn-primary">Approve Application</button>
+        <button class="btn btn-secondary">Save as Draft</button>
+        <button class="btn btn-ghost">View History</button>
+        <button class="btn btn-danger">Decline</button>
+        <button class="btn btn-primary" disabled>Disabled State</button>
+    </div>
+
+    <!-- 2. BADGES & CHIPS -->
+    <h2 class="section-title">2. Badges & Chips</h2>
+    <div class="flex gap-4 mb-4 items-center">
+        <span class="badge badge-success">Approved (Low Risk)</span>
+        <span class="badge badge-warning">Review (Medium Risk)</span>
+        <span class="badge badge-danger">Critical (High Risk)</span>
+        <span class="badge badge-info">Information</span>
+    </div>
+    <div class="flex gap-4 mb-4">
+        <span class="chip">Sector: Trading</span>
+        <span class="chip">Years in Business: 7</span>
+        <span class="chip">Country: UAE</span>
+    </div>
+
+    <!-- 3. TABS -->
+    <h2 class="section-title">3. Tabs Navigation</h2>
+    <div class="tabs">
+        <button class="tab active">Overview</button>
+        <button class="tab">Financial Health</button>
+        <button class="tab">Sector Risk</button>
+        <button class="tab">Documents</button>
+    </div>
+
+    <!-- 4. CARDS & SCORE METER -->
+    <h2 class="section-title">4. Cards & Score Meter</h2>
+    <div class="grid-cols-3">
+        <!-- Metric Card -->
+        <div class="card metric-card">
+            <div class="metric-card-header">
+                <span class="metric-icon">📦</span>
+                <span class="metric-trend up">↑ 3.2%</span>
+            </div>
+            <div class="metric-value">68.4%</div>
+            <div class="metric-label">Approval Rate</div>
+        </div>
+        
+        <!-- Score Meter Card -->
+        <div class="card" style="text-align: center;">
+            <div class="score-meter" data-score="742">
+                <svg viewBox="0 0 140 140">
+                    <circle class="score-bg" cx="70" cy="70" r="58"></circle>
+                    <circle class="score-fill" cx="70" cy="70" r="58"></circle>
+                </svg>
+                <div class="score-content">
+                    <div class="score-value">742</div>
+                    <div class="score-grade">B+</div>
+                </div>
+            </div>
+            <p class="mt-4" style="margin-bottom:0">Credit Score</p>
+        </div>
+
+        <!-- Skeleton Card -->
+        <div class="card">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="skeleton skeleton-avatar"></div>
+                <div style="flex:1">
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-text" style="width:40%"></div>
+                </div>
+            </div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width:80%"></div>
+        </div>
+    </div>
+
+    <!-- 5. DATA TABLES -->
+    <h2 class="section-title">5. Data Tables</h2>
+    <div class="card table-container" style="padding:0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Application ID</th>
+                    <th>Customer Name</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AE-2026-1234</td>
+                    <td>Ahmed Al-Mansouri</td>
+                    <td>Personal Loan</td>
+                    <td>50,000 AED</td>
+                    <td><span class="badge badge-warning">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>AE-2026-1235</td>
+                    <td>Fatima Al-Khalifa</td>
+                    <td>Credit Card</td>
+                    <td>25,000 AED</td>
+                    <td><span class="badge badge-success">Approved</span></td>
+                </tr>
+                <tr>
+                    <td>QA-2026-0456</td>
+                    <td>Al-Doha Logistics</td>
+                    <td>Trade Finance</td>
+                    <td>1,200,000 QAR</td>
+                    <td><span class="badge badge-info">Scored</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 6. FORMS & SCENARIO SIMULATOR -->
+    <h2 class="section-title">6. Forms & Scenario Simulator (What-if)</h2>
+    <div class="card grid-cols-2">
+        <div>
+            <div class="form-group">
+                <label class="form-label">Declared Monthly Salary (AED)</label>
+                <input type="number" id="simSalary" class="form-input" value="15000">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Requested EMI (AED) - <span id="simPmtVal">5000</span></label>
+                <input type="range" id="simPmt" class="slider" min="1000" max="15000" value="5000" step="500">
+            </div>
+        </div>
+        <div class="flex flex-col justify-between" style="padding-left: var(--space-6); border-left: 1px solid var(--border-color)">
+            <div>
+                <h3>Simulation Results</h3>
+                <p>Adjust the sliders to see the real-time impact on the Debt Service Ratio (DSR).</p>
+            </div>
+            <div>
+                <span id="dsrBadge" class="badge badge-warning" style="font-size: 16px; padding: 6px 12px;">DSR: 33.3%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. OVERLAYS & INTERACTIONS -->
+    <h2 class="section-title">7. Overlays & Modals</h2>
+    <div class="flex gap-4 mb-4">
+        <button id="openModalBtn" class="btn btn-primary">Open Confirmation Modal</button>
+        <button id="showToastBtn" class="btn btn-secondary">Trigger Toast Notification</button>
+    </div>
+
+</div>
+
+<!-- Modal Overlay -->
+<div id="demoModal" class="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">Confirm Decision</div>
+        <div class="modal-body">Are you sure you want to approve this application overriding the AI Copilot recommendation? This action will be logged in the audit trail.</div>
+        <div class="modal-actions">
+            <button id="closeModalBtn" class="btn btn-secondary">Cancel</button>
+            <button id="confirmModalBtn" class="btn btn-primary">Yes, Approve</button>
+        </div>
+    </div>
+</div>
+
+<script src="components.js"></script>
+</body>
+</html>
