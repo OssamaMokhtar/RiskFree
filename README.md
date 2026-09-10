@@ -1,4 +1,4 @@
-# RiskFree — AI Credit Scoring & Risk Platform for GCC Lending
+# RiskLens — AI Credit Scoring & Risk Platform for GCC Lending
 
 > Retail and SME credit decisioning with explainable scoring, AML/fraud screening, and an LLM copilot over regulatory policy — designed for Arabic/English markets.
 
@@ -10,7 +10,7 @@
 
 Conventional credit scoring in the GCC leaves large segments effectively invisible: expatriate workers with short local credit histories, SMEs whose cash flow lives outside formal reporting, and first-time borrowers with no bureau file at all. Lenders respond by either rejecting them or pricing in blanket risk — losing viable customers and mispricing the ones they keep.
 
-RiskFree is a product architecture for scoring those borrowers using alternative signals (open banking, telecom, utility) while staying explainable enough to defend to a regulator and a rejected applicant.
+RiskLens is a product architecture for scoring those borrowers using alternative signals (open banking, telecom, utility) while staying explainable enough to defend to a regulator and a rejected applicant.
 
 ## What it does
 
